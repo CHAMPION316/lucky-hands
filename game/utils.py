@@ -1,6 +1,5 @@
 import time
-# Use os import below at a later time
-# import os
+import os
 
 
 def delay_print(text, delay):
@@ -12,3 +11,9 @@ def delay_print(text, delay):
     """
     print("", text, delay)
     time.sleep(delay)
+    
+def clear_terminal():
+    """
+    Clears the terminal
+    """
+    os.system('cls' if os.name == 'int' else 'clear')
