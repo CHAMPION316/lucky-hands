@@ -4,33 +4,8 @@ import operator
 import keyboard
 import sys
 
-
+from .drawings import logo
 from .utils import delay_print, clear_terminal
-
-
-def logo():
-    """
-    Text for the game logo
-    """
-    delay_print("""
-                
-   __            _                                  _     
-  / / _   _  ___| | ___   _    /\  /\__ _ _ __   __| |___ 
- / / | | | |/ __| |/ / | | |  / /_/ / _` | '_ \ / _` / __|
-/ /__| |_| | (__|   <| |_| | / __  / (_| | | | | (_| \__ \
-\____/\__,_|\___|_|\_\\__, | \/ /_/ \__,_|_| |_|\__,_|___/
-                      |___/                               
-
-         __
- _(\    |@@|
-(__/\__ \--/ __
-   \___|----|  |   __
-       \ }{ /\ )_ / _\
-       /\__/\ \__O (__
-      (--/\--)    \__/
-      _)(  )(_
-     `---''---
-                """, 2)
 
 
 def home_screen():
@@ -41,4 +16,16 @@ def home_screen():
     clear_terminal()
     logo()
     print("\n" * 2)
-    print()
+    delay_print("{:^70}".format(input("PRESS ENTER TO PLAY")), 1)
+    clear_terminal()
+    print("LOOKING GOOD")
+    
+def main():
+    """
+    The main game loop
+    """
+    home_screen()
+    
+
+if __name__ == "__main__":
+    main()
