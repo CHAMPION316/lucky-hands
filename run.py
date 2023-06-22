@@ -1,41 +1,19 @@
 import random
 
-# ASCII Arts for rock, paper, and scissors by Veronica Karlsson
-rock = '''  
-    _______
----'   ____)  
-      (_____)  
-      (_____)  
-      (____)
----.__(___)  
-'''
 
-paper = '''  
-    _______
----'   ____)____  
-          ______)  
-          _______)  
-         _______)
----.__________)  
-'''
+# #user choice
+# user_action = input("Enter a choice (rock, paper, scissors): ")
 
-scissors = '''  
-    _______
----'   ____)____  
-          ______)  
-       __________)  
-      (____)
----.__(___)  
-'''  
+# #possible outcomes
+# possible_actions = ["rock", "paper", "scissors"]
 
-#user choice
-user_action = input("Enter a choice (rock, paper, scissors): ")
+# #computer choice
+# computer_action = random.choice(possible_actions)
 
-#possible outcomes
-possible_actions = ["rock", "paper", "scissors"]
+# #print statement for results
+# print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
 
-#computer choice
-computer_action = random.choice(possible_actions)
 
-#print statement for results
-print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+from game.functions import main
+
+main()
