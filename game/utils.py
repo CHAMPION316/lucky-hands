@@ -9,11 +9,11 @@ def delay_print(text, delay):
         text (string) - text to be printed out
         delay (integer) - the number of second to delay by
     """
-    print("", text, delay)
+    print("", text)
     time.sleep(delay)
     
 def clear_terminal():
     """
     Clears the terminal
     """
-    os.system('cls' if os.name == 'int' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
