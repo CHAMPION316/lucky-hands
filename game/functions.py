@@ -1,10 +1,12 @@
 """ Imports for game functionality """
 import random
 import operator
+import keyboard
 import sys
 
 
 from .utils import delay_print, clear_terminal
+
 
 def logo():
     """
@@ -37,4 +39,6 @@ def home_screen():
     for opening game
     """
     clear_terminal()
-    
+    logo()
+    print("\n" * 2)
+    print()
