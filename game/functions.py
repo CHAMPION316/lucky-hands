@@ -16,9 +16,13 @@ def home_screen():
     clear_terminal()
     logo()
     print("\n" * 2)
-    delay_print("{:^70}".format(input("PRESS ENTER TO PLAY")), 1)
-    clear_terminal()
-    
+    delay_print("{:^50}".format("1: PLAY GAME"), 1)
+    delay_print("{:^50}".format("2: RULES"), 1)
+    delay_print("{:^50}".format("3: EXIT"), 1)
+    delay_print((input(" " * 17 + "PRESS ENTER TO PLAY")), 1)
+    print("\n" * 2)
+
+
 # (Here I will probably create a def play() section when ready)
 
 def play_game():
