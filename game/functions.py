@@ -1,7 +1,6 @@
 """ Imports for game functionality """
 import random
 import operator
-import keyboard
 import sys
 
 from .drawings import logo, rock, paper, scissors
