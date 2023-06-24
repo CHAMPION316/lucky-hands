@@ -19,33 +19,31 @@ def logo():
     
     
 # ASCII Arts for rock, paper, and scissors by Veronica Karlsson
-# User choices for the game
+# User image choices for the game
 
-rock = r"""  
+rock = '''  
     _______
 ---'   ____)  
       (_____)  
       (_____)  
       (____)
 ---.__(___)  
-"""
+'''
 
-paper = r"""  
+paper = '''  
     _______
 ---'   ____)____  
           ______)  
           _______)  
          _______)
 ---.__________)  
-"""
+'''
 
-scissors = r"""  
+scissors = '''  
     _______
 ---'   ____)____  
           ______)  
        __________)  
       (____)
 ---.__(___)  
-"""  
-
-game_images = [rock, paper, scissors]
+'''  
