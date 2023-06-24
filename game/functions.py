@@ -4,7 +4,7 @@ import operator
 import keyboard
 import sys
 
-from .drawings import logo
+from .drawings import logo, game_images
 from .utils import delay_print, clear_terminal
 
 
@@ -18,8 +18,9 @@ def home_screen():
     print("\n" * 2)
     delay_print("{:^70}".format(input("PRESS ENTER TO PLAY")), 1)
     clear_terminal()
-    print("LOOKING GOOD")
-    
+    game_choices = game_images
+    for choice in game_choices:
+        print(choice)
     
 # (Here I will probably create a def play() section when ready)
     
