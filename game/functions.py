@@ -20,6 +20,9 @@ def home_screen():
     clear_terminal()
     print("LOOKING GOOD")
     
+    
+# (Here I will probably create a def play() section when ready)
+    
 def main():
     """
     The main game loop
