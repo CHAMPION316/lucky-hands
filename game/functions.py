@@ -18,24 +18,56 @@ def home_screen():
     delay_print("{:^50}".format("1: PLAY GAME"), 1)
     delay_print("{:^50}".format("2: RULES"), 1)
     delay_print("{:^50}".format("3: EXIT"), 1)
-    delay_print((input(" " * 17 + "PRESS ENTER TO PLAY")), 1)
     print("\n" * 2)
+    
+    while True:
+        home_screen_choice = input(" " * 17 + "Please choose an option : ")
+        if home_screen_choice == "1":
+            play_game()
+        elif home_screen_choice == "2":
+            clear_terminal()
+            print(game_rules)
+            print("\n")
+            
+            while True:
+                if input(" " * 12 + "RETURN TO MAIN MENU? (Y) : ").upper() == "Y":
+                    clear_terminal()
+                    home_screen()
+                else:
+                    print("{:^70}".format("Please Try Again"))
+        elif home_screen_choice == "3":
+            clear_terminal()
+            sys.exit()
+        else:
+            print("{:^70}".format("Please Choose option 1, 2 or 3"))
+            
 
-
-# (Here I will probably create a def play() section when ready)
 
 def play_game():
     """
     Game logic user choice and
     computer choice
     """
+    clear_terminal()
     # Game options
     game_choices = [rock, paper, scissors]
     # User choice
     user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
     print("User Choice: ")
     print(game_choices[user_choice])
-    
+
+
+# Game rules explained
+game_rules = ("The game is simple, you win by drawing the correct hand. \n"
+              "You will have three total choices to choose from \n"
+              "which are as follows. \n"
+              "rock, paper, and scissors \n"
+              "Rock beats Scissors \n"
+              "Scissors beats Paper \n"
+              "Paper beats Rock \n"
+              "The user will choose first followed by \n"
+              "the computer. Now choose wisely......")
+
     
 def main():
     """
