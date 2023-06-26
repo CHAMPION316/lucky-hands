@@ -42,7 +42,8 @@ def home_screen():
             print("{:^70}".format("Please Choose option 1, 2 or 3"))
             
 
-
+#FIX INFINITE LOOP WITH CHOICE 1 - takes you back to home_screen and starts all over.
+# Maybe do best of 5 or something then end game or choose to play again
 def play_game():
     """
     Game logic user choice and
@@ -57,7 +58,7 @@ def play_game():
     print(game_choices[user_choice])
 
 
-# Game rules explained
+# Game rules explained - option 3 in home_screen()
 game_rules = ("The game is simple, you win by drawing the correct hand. \n"
               "You will have three total choices to choose from \n"
               "which are as follows. \n"
