@@ -52,14 +52,37 @@ def play_game():
     clear_terminal()
     # Game options
     game_choices = [rock, paper, scissors]
+    
     # User choice
     user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
     print("User Choice: ")
     print(game_choices[user_choice])
+    
+    # hand_choice_text funtion 
+    choice_text = hand_choice_text(user_choice)
+    print(choice_text)
+    
     # Computer Choice
     computer_choice = random.randint(0, 2)
     print("Computer Choice: ")
     print(game_choices[computer_choice])
+
+
+def hand_choice_text(user_choice):
+    """
+    Text that describes the
+    hand drawn
+    """
+    choice_text = ""
+    if user_choice == 0:
+        print("You chose 'Rock'")
+    elif user_choice == 1:
+        print("You chose 'Paper'")
+    else:
+        print("You chose 'Scissor'")
+        
+    return choice_text
+        
 
 
 # Game rules explained - option 3 in home_screen()
