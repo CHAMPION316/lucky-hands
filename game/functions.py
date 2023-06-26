@@ -75,11 +75,11 @@ def hand_choice_text(user_choice):
     """
     choice_text = ""
     if user_choice == 0:
-        print("You chose 'Rock'")
+        choice_text = "You chose 'Rock'"
     elif user_choice == 1:
-        print("You chose 'Paper'")
+        choice_text = "You chose 'Paper'"
     else:
-        print("You chose 'Scissor'")
+        choice_text = "You chose 'Scissor'"
         
     return choice_text
         
