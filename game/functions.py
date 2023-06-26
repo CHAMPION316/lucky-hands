@@ -56,6 +56,10 @@ def play_game():
     user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
     print("User Choice: ")
     print(game_choices[user_choice])
+    # Computer Choice
+    computer_choice = random.randint(0, 2)
+    print("Computer Choice: ")
+    print(game_choices[computer_choice])
 
 
 # Game rules explained - option 3 in home_screen()
