@@ -55,36 +55,45 @@ def play_game():
     
     # User choice
     user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
-    print("User Choice: ")
-    print(game_choices[user_choice])
-    
-    # hand_choice_text funtion 
-    choice_text = hand_choice_text(user_choice)
-    print(choice_text)
+    print("User Choice: ", game_choices[user_choice])
+    # print(game_choices[user_choice])
     
     # Computer Choice
     computer_choice = random.randint(0, 2)
-    print("Computer Choice: ")
-    print(game_choices[computer_choice])
+    print("Computer Choice: ", game_choices[computer_choice])
+    # print(game_choices[computer_choice])
+    
+    # Call the hand_choice_text funtion texts 
+    choice_text = hand_name_text(user_choice, computer_choice)
+    # print(choice_text)
 
-
-def hand_choice_text(user_choice):
+    
+def hand_name_text(user_choice, computer_choice):
     """
-    Text that describes the
-    hand drawn
+    Text for hand drawn 
+    from both user and computer
     """
-    choice_text = ""
-    if user_choice == 0:
-        choice_text = "You chose 'Rock'"
-    elif user_choice == 1:
-        choice_text = "You chose 'Paper'"
-    else:
-        choice_text = "You chose 'Scissor'"
+    if user_choice >= 0:
+        user_text = ""
+        if user_choice == 0:
+            user_text = "You chose 'Rock'"
+        elif user_choice == 1:
+            user_text = "You chose 'Paper'"
+        else:
+            user_text = "You chose 'Scissor'"
+        print(user_text) 
         
-    return choice_text
-        
+    if computer_choice >= 0:
+        computer_text = ""
+        if computer_choice == 0:
+            computer_text = "Computer chose 'Rock'"
+        elif computer_choice == 1:
+            computer_text = "Computer chose 'Paper'"
+        else:
+            computer_text = "Computer chose 'Scissor'"
+        print(computer_text)
 
-
+   
 # Game rules explained - option 3 in home_screen()
 game_rules = ("The game is simple, you win by drawing the correct hand. \n"
               "You will have three total choices to choose from \n"
