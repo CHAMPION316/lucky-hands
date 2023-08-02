@@ -53,10 +53,22 @@ def play_game():
     # Game options
     game_choices = [rock, paper, scissors]
     
-    # User choice
-    user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
+    #User Choice logic
+    while True:
+        try:
+            # User Choice
+            user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
+            
+            if user_choice not in [0, 1, 2]:
+                print("Invalid input. Please choose 0, 1, or 2.")
+            else:
+                break # Break the loop if the input is valid
+        
+        except ValueError:
+            print("Invalid input. Please enter a valid number (0, 1, or 2).")
+            
     print("User Choice: ", game_choices[user_choice])
-    # print(game_choices[user_choice])
+    
     
     # Computer Choice
     computer_choice = random.randint(0, 2)
