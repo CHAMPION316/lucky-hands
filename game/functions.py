@@ -19,7 +19,7 @@ def home_screen():
     delay_print("{:^50}".format("2: RULES"), 1)
     delay_print("{:^50}".format("3: EXIT"), 1)
     print("\n" * 2)
-    
+
     while True:
         home_screen_choice = input(" " * 17 + "Please choose an option : ")
         if home_screen_choice == "1":
@@ -57,27 +57,27 @@ def play_game():
     while True:
         try:
             # User Choice
-            user_choice = int(input("What do you choose? Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
+            user_choice = int(input("Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
             
             if user_choice not in [0, 1, 2]:
-                print("Invalid input. Please choose 0, 1, or 2.")
+                print("Invalid integer please choose 0, 1, or 2")
             else:
                 break # Break the loop if the input is valid
         
         except ValueError:
-            print("Invalid input. Please enter a valid number (0, 1, or 2).")
-            
+            print("Invalid input. Please choose a number.")
+    
+    computer_choice = random.randint(0, 2)
+    
     print("User Choice: ", game_choices[user_choice])
     
     
     # Computer Choice
-    computer_choice = random.randint(0, 2)
+    # computer_choice = random.randint(0, 2)
     print("Computer Choice: ", game_choices[computer_choice])
-    # print(game_choices[computer_choice])
     
     # Call the hand_choice_text funtion texts 
     choice_text = hand_name_text(user_choice, computer_choice)
-    # print(choice_text)
 
     
 def hand_name_text(user_choice, computer_choice):
@@ -104,6 +104,24 @@ def hand_name_text(user_choice, computer_choice):
         else:
             computer_text = "Computer chose 'Scissor'"
         print(computer_text)
+        
+        
+def update_scores(user_choice, computer_choice, user_score, computer_score,):
+    """
+    Update scores based on the
+    outcome of the round
+    """
+    # Game rules to determine the winner
+    if user_choice == computer_choice:
+        return user_score, computer_score # Draw no score change
+    elif (user_choice == 0 and computer_choice == 2) or \
+         (user_choice == 1 and computer_choice == 0) or \
+         (user_choice == 2 and computer_choice ==1):
+        user_choice +=1
+    else:
+        computer_choice +=1
+        
+    return user_choice, computer_choice
 
    
 # Game rules explained - option 3 in home_screen()
@@ -124,6 +142,7 @@ def main():
     """
     home_screen()
     play_game()
+    # update_scores()
     
 
 if __name__ == "__main__":
