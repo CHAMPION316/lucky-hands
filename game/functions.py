@@ -67,13 +67,14 @@ def play_game():
         except ValueError:
             print("Invalid input. Please choose a number.")
     
-    computer_choice = random.randint(0, 2)
-    
+     # print user choice
     print("User Choice: ", game_choices[user_choice])
     
     
     # Computer Choice
-    # computer_choice = random.randint(0, 2)
+    computer_choice = random.randint(0, 2)
+    
+    #print computer choice
     print("Computer Choice: ", game_choices[computer_choice])
     
     # Call the hand_choice_text funtion texts 
