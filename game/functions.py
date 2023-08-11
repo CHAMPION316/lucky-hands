@@ -39,7 +39,7 @@ def home_screen():
             clear_terminal()
             sys.exit()
         else:
-            print("{:^70}".format("Please Choose option 1, 2 or 3"))
+            print("{:^70}".format("Please Choose option 1(PLAY AGAIN), 2(RULES) or 3(EXIT)"))
             
 
 # FIX INFINITE LOOP WITH CHOICE 1 - takes you back to home_screen and starts all over.
@@ -65,6 +65,8 @@ def play_game():
             try:
                 # User Choice
                 user_choice = int(input("Type 0 for rock, 1 for paper, 2 for scissor. \n => "))
+                
+                clear_terminal()
                 
                 if user_choice not in [0, 1, 2]:
                     print("Invalid integer please choose 0, 1, or 2")
